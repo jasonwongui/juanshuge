@@ -2,8 +2,10 @@
   <div class="home">
     <top-bar :pageBack="false" class="topBar"></top-bar>
     <search></search>
-  
+    
+    <div class="listScroll-wrap">
     <div ref="listWrapper" class="listScroll">
+      <div>
       <div class="bookList">
         <div class="bookListItem">
           <div class="item">
@@ -119,7 +121,8 @@
         </div>
       </div>
     </div>
-
+    </div>
+    </div>
 
   </div>
 
@@ -152,10 +155,15 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+
+.listScroll-wrap
+  position: fixed
+  top: 92px
+  bottom: 49px
+  width: 100%
   .listScroll
-    width: 100%
+    height: 100%
     overflow: hidden
-    background: white
     .bookList
       width: 100%
       display: flex
